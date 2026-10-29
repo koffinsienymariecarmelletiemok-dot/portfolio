@@ -1,0 +1,37 @@
+:root{
+  --nuit:#0E1420; --nuit-2:#151D2D; --ivoire:#EDE8DC; --brume:#9AA3B5; --laiton:#C2A265;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;background:var(--nuit)}
+body{font-family:var(--sans);color:var(--ivoire);background:var(--nuit);line-height:1.7;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--laiton);outline-offset:4px}
+nav{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:flex-end;gap:1.6rem;padding:1.1rem clamp(1.2rem,5vw,4rem);background:linear-gradient(var(--nuit),transparent)}
+nav a{text-decoration:none;color:var(--brume);font-size:.95rem;transition:color .25s}
+nav a:hover{color:var(--ivoire)}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(1.2rem,5vw,4rem) clamp(3rem,10vh,6rem);overflow:hidden}
+#reseau{position:absolute;inset:0;width:100%;height:100%}
+.hero>*:not(canvas){position:relative}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(3rem,11vw,8.5rem);line-height:.95;letter-spacing:-.01em;max-width:11ch}
+.role{font-family:var(--serif);font-size:clamp(1.3rem,3vw,2rem);color:var(--laiton);margin-top:1.4rem}
+main{padding:0 clamp(1.2rem,5vw,4rem)}
+section{padding:clamp(4rem,12vh,8rem) 0;border-top:1px solid rgba(194,162,101,.28);display:grid;grid-template-columns:minmax(0,12rem) minmax(0,1fr);gap:clamp(1rem,5vw,4rem)}
+h2{font-family:var(--serif);font-weight:500;font-size:1.9rem;color:var(--laiton);line-height:1.2}
+.contenu{max-width:62ch}
+.contenu p+p{margin-top:1.1rem}
+dl div{padding:1.1rem 0;border-bottom:1px solid rgba(154,163,181,.2)}
+dl div:first-child{padding-top:0}
+dt{font-family:var(--serif);font-size:1.45rem;font-weight:500}
+dd{color:var(--brume)}
+.projet{padding:1.4rem 0;border-bottom:1px solid rgba(154,163,181,.2)}
+.projet:first-child{padding-top:0}
+.projet h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;line-height:1.3}
+.projet .etat{color:var(--laiton);font-size:.95rem;margin:.2rem 0 .5rem}
+.projet p{color:var(--brume)}
+.contact a{display:block;font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2rem);text-decoration:none;padding:.35rem 0;width:fit-content;overflow-wrap:anywhere;border-bottom:1px solid transparent;transition:border-color .25s,color .25s}
+.contact a:hover{color:var(--laiton);border-color:var(--laiton)}
+footer{padding:2.5rem clamp(1.2rem,5vw,4rem);color:var(--brume);font-size:.9rem;border-top:1px solid rgba(194,162,101,.28)}
+@media (max-width:720px){section{grid-template-columns:1fr}nav{gap:1.1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
